@@ -12,14 +12,14 @@
     if (isset($_POST['btn-logout'])) {
         unset($_SESSION['user']);
         unset($_SESSION['is-logged-in']);
-        header('Location: '.$uri.'/my-company/');
+        header('Location: '.$uri.'/Website');
         exit;
     } else if (isset($_POST['btn-login'])) {
         if ($_POST['user'] == 'admin' && $_POST['pass'] == 'abc') {
             $_SESSION['is-logged-in'] = true;
             $_SESSION['user'] = $_POST['user'];
         }
-        header('Location: '.$uri.'/pages/admin/admin.php');
+        header('Location: '.$uri.'/Website/pages/admin/admin.php');
         exit;
     }
 ?>
