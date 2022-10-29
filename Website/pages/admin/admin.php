@@ -37,7 +37,23 @@
         } else {
           ?>
           <ul class="collection">
-            <h1>You are logged in</h1>
+            <?php
+            $myfile = fopen("../../assets/contacts-admin.txt", "r") or die("Unable to open file!");
+            while (!feof($myfile)) {
+              $arr = explode(",", fgets($myfile));
+            ?>
+              <li class="collection-item avatar">
+                <i class="material-icons circle">folder</i>
+                <span class="title"><?php echo $arr[0] ?></span>
+                <p><?php echo $arr[1] ?><br>
+                  <?php echo $arr[2] ?>
+                </p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+            <?php
+            }
+            fclose($myfile);
+            ?>
           </ul>
           <form name="logout-form" method="post" action="auth.php">
             <button class="btn" name="btn-logout">Logout</button>
