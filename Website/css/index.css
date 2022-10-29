@@ -27,3 +27,23 @@ nav {
     font-family: 'Permanent Marker';
     color: white;
 }
+
+.text-black {
+    color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.img-background {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}

@@ -19,7 +19,7 @@
             $_SESSION['is-logged-in'] = true;
             $_SESSION['user'] = $_POST['user'];
         }
-        header('Location: '.$uri.'pages/admin/admin.php');
+        header('Location: '.$uri.'/pages/admin/admin.php');
         exit;
     }
 ?>
